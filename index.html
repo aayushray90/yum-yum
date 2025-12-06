@@ -1,81 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <title>Yum Yum Delivery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="index.js" ></script> 
 </head>
 
 <body>
+
     <div id="navbar">
-        <div class="topnav">
-            <a class="logo" href="index.html">Yum Yum</a>
-            <div>
-                <select name="partner" id="partner">
-                    <option value="" hidden selected>partner with us </option>
-                    <option value="rider">rider</option>
-                    <option value="resturant">resturant</option>
-                    <option value="carrier">carrier</option>
-                </select>
-            </div>
-            <a class="login" href="login.html">login/sign up</a>
-        </div>
+        <a href="#" class="logo-label">Yum Yum</a>
 
-        <div class="loc">
-            <input type="text" placeholder="Enter your location">
+        <div style="display: flex; align-items: center;">
+            <div class="dropdown">
+                <span class="drop-btn">Partner with us &#9662;</span>
+                <div class="dropdown-content">
+                    <a href="#rider">Rider</a>
+                    <a href="#restaurant">Restaurant</a>
+                    <a href="#rider">Carrier</a>
+                </div>
+            </div>
+
+            <a href="#login" class="login-btn-label" id="topLoginBtn">Login</a>
         </div>
     </div>
 
-    <div class="features">
+    <div class="content">
 
-        <div class="feature-box">
-            <div class="text">
-                <h3>Resturant</h3>
-                <p>Discover restaurants near you offering fresh meals, fast delivery, and exclusive offers.</p>
-                <button>Get started</button>
+        <div id="home" class="page">
+            <div class="hero">
+                <div>
+                    <h1>Delicious Food, Delivered.</h1>
+                    <input type="text" placeholder="Enter location...">
+                </div>
             </div>
-            <img src="img/resturant.png" alt="resturant">
+
+            <div class="container">
+                <div class="feature-box">
+                    <div class="text">
+                        <h2>Restaurants</h2>
+                        <p>Find best food near you.</p>
+                        <a href="#restaurant" class="action-label">Find Food</a>
+                    </div>
+                    <img src="img/resturant.png">
+                </div>
+
+                <div class="feature-box reverse">
+                    <div class="text">
+                        <h2>Ride with Us</h2>
+                        <p>Join our fleet and earn money.</p>
+                        <a href="#rider" class="action-label">Join Now</a>
+                    </div>
+                    <img src="img/ride-with-us-pic.png">
+                </div>
+
+                <div class="feature-box">
+                    <div class="text">
+                        <h2>Bulk Orders</h2>
+                        <p>Catering for big offices.</p>
+                        <a href="#bulk" class="action-label">Order Bulk</a>
+                    </div>
+                    <img src="img/bulk-order-pic.png">
+                </div>
+
+                <div class="feature-box reverse">
+                    <div class="text">
+                        <h2>Gift Cards</h2>
+                        <p>Send digital gift cards.</p>
+                        <a href="#giftcard" class="action-label">Buy Card</a>
+                    </div>
+                    <img src="img/gift-card.png">
+                </div>
+
+                <div class="feature-box">
+                    <div class="text">
+                        <h2>Meal Plans</h2>
+                        <p>Daily tiffin service.</p>
+                        <a href="#mealplan" class="action-label">View Plans</a>
+                    </div>
+                    <img src="img/meal-plan.png">
+                </div>
+            </div>
         </div>
 
-        <div class="feature-box reverse">
-            <div class="text">
-                <h3>Ride with us</h3>
-                <p>Earn on your own schedule by joining our delivery fleet. Flexible hours, instant payouts.</p>
-                <button>Get started</button>
+        <div id="restaurant" class="page">
+            <div class="container">
+                <h1>Partner with Yum Yum</h1>
+                <div class="feature-box">
+                    <div class="text">
+                        <h2>Restaurant Form</h2>
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Owner:</label>
+                            <input type="text">
+                        </div>
+                        <label class="action-label">Submit</label>
+                        <br>
+                        <a href="#" class="back-label">Back Home</a>
+                    </div>
+                    <img src="img/resturant.png">
+                </div>
             </div>
-            <img src="img/ride-with-us-pic.png" alt="ride-with-us">
         </div>
 
-        <div class="feature-box">
-            <div class="text">
-                <h3>Corporate orders/Bulk orders</h3>
-                <p>Perfect for offices, events, and large gatherings. Get bulk meals delivered on time.</p>
-                <button>Get started</button>
+        <div id="rider" class="page">
+            <div class="container">
+                <h1>Become a Rider</h1>
+                <div class="feature-box reverse">
+                    <div class="text">
+                        <h2>Rider Form</h2>
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Vehicle:</label>
+                            <select>
+                                <option>Bike</option>
+                                <option>Car</option>
+                            </select>
+                        </div>
+                        <label class="action-label" >Apply</label>
+                        <br>
+                        <a href="#" class="back-label">Back Home</a>
+                    </div>
+                    <img src="img/ride-with-us-pic.png">
+                </div>
             </div>
-            <img src="img/bulk-order-pic.png" alt="bulk order">
         </div>
 
-        <div class="feature-box reverse">
-            <div class="text">
-                <h3>Gift-cards</h3>
-                <p>Share the joy of good food. Send digital gift cards to friends, family, or colleagues.</p>
-                <button>Get started</button>
+        <div id="bulk" class="page">
+            <div class="container">
+                <h1>Bulk Orders</h1>
+                <div class="feature-box">
+                    <div class="text">
+                        <h2>Quote Form</h2>
+                        <div class="form-group">
+                            <label>Company:</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>People:</label>
+                            <input type="number">
+                        </div>
+                        <label class="action-label" >Get Quote</label>
+                        <br>
+                        <a href="#" class="back-label">Back Home</a>
+                    </div>
+                    <img src="img/bulk-order-pic.png">
+                </div>
             </div>
-            <img src="img/gift-card.png" alt="gift-cards">
         </div>
 
-        <div class="feature-box">
-            <div class="text">
-                <h3>Meal-plan</h3>
-                <p>Healthy, homemade tiffins delivered daily. Customize your weekly meal plan.</p>
-                <button>Get started</button>
+        <div id="giftcard" class="page">
+            <div class="container">
+                <h1>Gift Cards</h1>
+                <div class="feature-box reverse">
+                    <div class="text">
+                        <h2>Buy Card</h2>
+                        <div class="form-group">
+                            <label>Amount:</label>
+                            <select>
+                                <option>$10</option>
+                                <option>$50</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Email:</label>
+                            <input type="text">
+                        </div>
+                        <label class="action-label" >Send</label>
+                        <br>
+                        <a href="#" class="back-label">Back Home</a>
+                    </div>
+                    <img src="img/gift-card.png">
+                </div>
             </div>
-            <img src="img/meal-plan.png" alt="meal-plan">
+        </div>
+
+        <div id="mealplan" class="page">
+            <div class="container">
+                <h1>Meal Plans</h1>
+                <div class="feature-box">
+                    <div class="text">
+                        <h2>Subscription</h2>
+                        <div class="form-group">
+                            <label>Plan:</label>
+                            <select>
+                                <option>Veg</option>
+                                <option>Non-Veg</option>
+                            </select>
+                        </div>
+                        <label class="action-label" >Subscribe</label>
+                        <br>
+                        <a href="#" class="back-label">Back Home</a>
+                    </div>
+                    <img src="img/meal-plan.png">
+                </div>
+            </div>
+        </div>
+
+        <div id="login" class="page">
+            <div class="container" style="text-align: center;">
+                <div
+                    style="background-color: white; padding: 40px; border-radius: 10px; display: inline-block; max-width: 400px; width: 100%; border: 1px solid #ddd;">
+                    <h1>Login</h1>
+                    <div class="form-group" style="text-align: left;">
+                        <label>User:</label>
+                        <input type="text" id="userInput">
+                    </div>
+                    <div class="form-group" style="text-align: left;">
+                        <label>Pass:</label>
+                        <input type="password">
+                    </div>
+                    <button class="action-label" style="border:none; width:100%;" >Login</button>
+                    <br><br>
+                    <a href="#" class="back-label" style="width:100%; display:block; box-sizing:border-box;">Cancel</a>
+                </div>
+            </div>
         </div>
 
     </div>
+
 
 </body>
 
